@@ -1,0 +1,149 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+.header__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 26px 0;
+}
+
+.header__logo {
+    width: 120px;
+    height: 36px;
+    margin-bottom: 28px;
+    background-color: aliceblue;
+    background-image: url('../img/sila.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-link {
+    position: relative;
+    display: block;
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 42px;
+    transition: 0.4s;
+}
+
+.header__nav-link_active {
+    color: #ED3551;
+}
+
+.header__nav-link:hover {
+    color: #ED3551;
+}
+
+.header__nav-link::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #ED3551;
+    left: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.header__nav-link:hover::before {
+    width: 100%;
+}
+
+.header__nav-link:last-child {
+    margin-right: 0;
+}
+
+.main {
+    padding-top: 212px;
+}
+
+.main-title {
+    font-family: 'Cormorant', serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 51px;
+    text-align: center;
+    margin-bottom: 28px;
+}
