@@ -30,7 +30,7 @@ containerQuestions
                 const questionsBtn = qBody.querySelector('.questions__btn');
                 const h = qBody
                             .querySelector('.questions__text')
-                            .clientHeight + 100;
+                            .clientHeight + 90;
 
                 qBody.style.cssText = `height: ${h}px;`;
             

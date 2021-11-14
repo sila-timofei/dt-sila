@@ -103,7 +103,7 @@ table {
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #000000;
     text-decoration: none;
@@ -148,7 +148,8 @@ table {
     font-size: 42px;
     line-height: 51px;
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
+    white-space: pre-line;
 }
 
 
@@ -158,17 +159,17 @@ table {
     align-items: flex-end;
     margin-top: 100px;
     margin-bottom: 60px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer__copyter, .footer__created {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.header__logo {
+.footer__logo {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 36px;
+    margin-bottom: 34px;
     width: 97px;
     height: 29px;
 }
@@ -191,5 +192,5 @@ table {
 .footer__created > a {
     text-decoration: none;
     color: black;
-    font-weight: 500;
+    font-weight: 700;
 }

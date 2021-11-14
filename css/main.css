@@ -72,7 +72,7 @@
 }
 
 .promo-video__text {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -176,7 +176,13 @@
     text-align: center;
     color: rgba(0, 0, 0, 0.7);
     line-height: 30px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    white-space: pre-line;
+}
+
+.text-about > span {
+    font-weight: 500px;
+    font-size: 20px;
 }
 
 .questions {
@@ -184,10 +190,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .questions__close {
     position: relative;
+    font-family: 'Montserrat', sans-serif;
     padding-top: 18px;
     padding-bottom: 18px;
     padding-left: 34px;
@@ -195,9 +203,8 @@
     margin-top: 140px;
     margin-left: auto;
     margin-right: auto;
-    width: 370px;
+    width: 680px;
     background-color: #FDECE8;
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 40px;
@@ -228,13 +235,13 @@
 }
 
 .questions__body {
-    padding-bottom: 32px;
     background-color: #FAFAFB;
     overflow: hidden;
-    width: 614px;
+    width: 680px;
     height: 60px;
     transition: 0.5s;
     margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .questions__title {
@@ -254,7 +261,6 @@
 .questions__title > span {
     display: flex;
     padding: 22px 0;
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     margin-right: 14px;
 }
@@ -285,7 +291,6 @@
 
 .questions__text {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.7);

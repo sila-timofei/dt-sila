@@ -1,0 +1,140 @@
+.main-title {
+    margin-bottom: 50px;
+}
+
+.reviews__btn-add {
+    position: relative;
+    border: 2px solid #000000;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    max-width: 226px;
+    height: 50px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.reviews__btn-add-body {
+    transition: 0.5s;
+    padding-left: 24px;
+}
+
+.reviews__btn-add-body > span {
+    line-height: 46px;
+}
+
+.reviews__btn-add:hover .reviews__btn-add-body {
+    transform: translateY(-50%);
+    color: white;
+}
+
+.reviews__btn-add:hover {
+    background-color: #ED3551;
+    border: 2px solid transparent;
+}
+
+.reviews__btn-add::after {
+    position: absolute;
+    content: '';
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../img/plus.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 18px;
+    transition: 0.5s;
+}
+
+.reviews__btn-add:hover:after {
+    background-image: url('../img/plus-white.svg');
+}
+
+.reviews__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+}
+
+.reviews__card {
+    width: 576px;
+    padding: 30px;
+    background-color: #FEFAFA;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.reviews__card-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.reviews__ava {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+    margin-right: 20px;
+    background-image: url('../img/ava.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.reviews__name {
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.reviews__text {
+    line-height: 28px;
+    opacity: 0.6;
+}
+
+.modal-reviews {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    overflow: auto;
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-reviews__body {
+    position: relative;
+    max-width: 770px;
+    height: 800px;
+    background-color: #F0F0F0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    transition: 0.4s;
+}
+
+.modal-reviews__btn-close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    background-image: url('../img/plus.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
