@@ -1,0 +1,112 @@
+.main-title {
+    margin-bottom: 80px;
+}
+
+.contact__wrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.contact__side {
+    width: 575px;
+}
+
+.contact__left-side {
+    height: 575px;
+    background-color: #FAFAFA;
+    padding: 74px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact__right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact__img {
+    height: 277px;
+    background-color: #FAFAFA;
+}
+
+.contact__name {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.contact__text {
+    line-height: 26px;
+    margin-bottom: 60px;
+}
+
+.contact__social-title {
+    opacity: 0.5;
+    margin-bottom: 16px;
+}
+
+.contact__social-item {
+    margin-bottom: 14px;
+}
+
+.contact__social-item > i {
+    opacity: 1;
+}
+
+.contact__socila-telegram {
+    width: 15px;
+}
+
+.contact__social-item:last-child {
+    margin-bottom:0;
+}
+
+.contact__social-item > a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.contact__social-item a:hover {
+    color: #ED3551;
+}
+
+.contact__btn-meet {
+    padding: 16px 30px;
+    margin-top: 40px;
+}
+
+
+.modal__body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.modal__title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.modal__text {
+    white-space: pre-line;
+    margin-bottom: 100px;
+    line-height: 28px;
+}
+
+.modal__body > .container-btn {
+    justify-content: center;
+}
+
+.modal__btn-write {
+    padding: 16px 30px;
+    text-decoration: none;
+}
+
+.modal__btn-write:hover {
+    color: #f7db00;
+}
+

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Данил Сила - Ведущий мероприятий</title>
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap" rel="stylesheet">
-    <title>Данил Сила - Ведущий мероприятий</title>
-    <meta itemprop="image" content="img/logo.png">
+    <script src="https://use.fontawesome.com/a875baa978.js"></script>
 </head>
 <body class="document">
     <header class="header">
@@ -21,7 +21,7 @@
             <nav class="header__nav">
                 <a href="#" class="header__nav-link off-link header__nav-link_active">главная</a>
                 <a href="reviews.html" class="header__nav-link">отзывы</a>
-                <a href="#" class="header__nav-link">контакты</a>
+                <a href="contact.html" class="header__nav-link">контакты</a>
             </nav>
         </div>
     </header>
@@ -67,7 +67,7 @@
             </div>
     
             <div class="promo-video">
-                <h2 class="main-title">Видео Портфолио.</h2>
+                <h2 class="main-title">Видео.</h2>
                 <p class="promo-video__text">Это видео поможет вам определится с вашим ведущим!</p>
     
                 <div class="promo-video__wrap">
@@ -196,44 +196,78 @@
 
     <footer class="footer">
         <div class="container footer__row">
-            <div class="footer__copyter">© Данил Сила 2013</div>
+            <div class="footer__copyter">© Ведущий Данил Сила 2013</div>
 
-            <div>
-                <a href="#" class="footer__logo logo off-link"></a>
-
-                <div class="social">
-                    <a href="#" class="social__link social__vk">
-                        <img src="img/vk.svg" alt="vk">
-                    </a>
-                    <a href="#" class="social__link social__instagram">
-                        <img src="img/instagram.svg" alt="instagram">
-                    </a>
-                    <a href="#" class="social__link social__whatsapp">
-                        <img src="img/whatsapp.svg" alt="whatsApp">
-                    </a>
-                    <a href="#" class="social__link social__telegram">
-                        <img src="img/telegram.svg" alt="telegram">
-                    </a>
-                    <a href="#" class="social__link social__google">
-                        <img src="img/google.svg" alt="google">
-                    </a>
-                </div>
+            <div class="social">
+                <a href="#" class="social__link" target="_blank">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social__link" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social__link" target="_blank">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social__link" target="_blank">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="social__link social__link-telegram" target="_blank">
+                    <img src="img/telegram.svg" class="social__telegram" alt="telegram">
+                </a>
             </div>
 
             <div class="footer__created">
-                Сайт разработан <a href="#" target="_blank">Dev</a>
+                Сайт разработан <a href="https://sila-timofei.github.io/dev/" target="_blank">Dev</a>
             </div>
         </div>
         <!-- /.container -->
     </footer>
 
     <script>
-        const offLink = document.querySelectorAll('.off-link');
+        window.addEventListener('DOMContentLoaded', function () {
 
-        offLink.forEach(i => {
-            i.addEventListener('click', e => {
-                e.preventDefault();
-            });
+            const containerQuestions = document.querySelector('.questions');
+
+            function closeAllQuestions() {
+                containerQuestions
+                    .querySelectorAll('.questions__body')
+                    .forEach(qBody => {
+                        qBody.style.cssText = ``;
+                        qBody
+                            .querySelector('.questions__btn')
+                            .classList
+                            .remove('questions__btn_close');
+                    });
+            }
+
+            containerQuestions
+                .querySelectorAll('.questions__body')
+                .forEach(qBody => {
+                    qBody
+                        .querySelector('.questions__title')
+                        .addEventListener('click', event => {
+                            let isOnlyClose = event
+                                .target
+                                .classList
+                                .contains('questions__btn_close');
+
+                            closeAllQuestions();
+
+                            if (isOnlyClose) return;
+
+                            const questionsBtn = qBody.querySelector('.questions__btn');
+                            const h = qBody
+                                .querySelector('.questions__text')
+                                .clientHeight + 90;
+
+                            qBody.style.cssText = `height: ${h}px;`;
+
+                            questionsBtn
+                                .classList
+                                .add('questions__btn_close');
+                        });
+                });
+
         });
     </script>
     <script src="js/main.js"></script>
