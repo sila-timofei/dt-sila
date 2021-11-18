@@ -8,15 +8,17 @@
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/uikit.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/general.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/a875baa978.js"></script>
 </head>
 <body class="document">
     <header class="header">
         <div class="container header__row">
+            <div class="header__btn-menu1"></div>
+
             <a href="index.html" class="header__logo logo off-link"></a>
 
             <nav class="header__nav">
@@ -24,8 +26,22 @@
                 <a href="reviews.html" class="header__nav-link">отзывы</a>
                 <a href="contact.html" class="header__nav-link">контакты</a>
             </nav>
+
+            <div class="header__btn-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </header>
+
+    <div class="mob-menu">
+        <nav class="mob-menu__nav">
+            <a href="#" class="mob-menu__link off-link mob-memu_link-active">главная</a>
+            <a href="reviews.html" class="mob-menu__link">отзывы</a>
+            <a href="contact.html" class="mob-menu__link">контакты</a>
+        </nav>
+    </div>
 
     <main class="main">
         <div class="container">
@@ -80,11 +96,11 @@
                 </div>
             </div>
 
-            <h1 class="main-title">Ведущий Данил Сила – профессиональный,
+            <h1 class="main-title about-title">Ведущий Данил Сила – профессиональный,
                 стильный и искренний подход!</h1>
             <p class="text-about"><span>Я знаю все, что нужно для создания праздника.</span>
 
-                Считаю важными индивидуальный подход, внимание к мелочам, только уместные шутки и интеллигентное чувство юмора! Создаю сценарий для каждой программы индивидуально с учетом всех требований и пожеланий, а также благодаря душевности и чувству юмора с легкостью могу снять волнение и напряжение гостей.
+                Считаю важными индивидуальный подход, внимание к мелочам, только уместные шутки и интеллигентное чувство юмора! Создаю сценарий для каждой программы индивидуально с учетом всех требований и пожеланий, а также благодаря душевности и чувству юмора с легкостью могу снять волнение и напряжение гостей.
             </p>
 
             <div class="questions__close">Часто задаваемые Вопросы / Ответы</div>
@@ -201,19 +217,13 @@
 
             <div class="social">
                 <a href="#" class="social__link" target="_blank">
-                    <i class="fa fa-vk" aria-hidden="true"></i>
+                    <img src="img/instagram.svg" class="social__icon" alt="instagram">
                 </a>
-                <a href="#" class="social__link" target="_blank">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#" class="social__link" target="_blank">
-                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                </a>
-                <a href="#" class="social__link" target="_blank">
-                    <i class="fa fa-google" aria-hidden="true"></i>
+                <a href="https://wa.me/79151111215" class="social__link" target="_blank">
+                    <img src="img/whatsApp.svg" class="social__icon" alt="whatsapp">
                 </a>
                 <a href="#" class="social__link social__link-telegram" target="_blank">
-                    <img src="img/telegram.svg" class="social__telegram" alt="telegram">
+                    <img src="img/telegram.svg" class="social__icon" alt="telegram">
                 </a>
             </div>
 
@@ -233,7 +243,10 @@
                 containerQuestions
                     .querySelectorAll('.questions__body')
                     .forEach(qBody => {
-                        qBody.style.cssText = ``;
+                        qBody.style.cssText += 'height: ' 
+                            + qBody.querySelector('.questions__title').clientHeight
+                            + 'px;';
+
                         qBody
                             .querySelector('.questions__btn')
                             .classList
@@ -241,12 +254,20 @@
                     });
             }
 
-            containerQuestions
-                .querySelectorAll('.questions__body')
-                .forEach(qBody => {
-                    qBody
-                        .querySelector('.questions__title')
-                        .addEventListener('click', event => {
+            function transtionTo(elm, newH) {
+                if (!newH || newH === 0) {
+                    newH = 0;
+
+                    Array.prototype.forEach.call(elm.children, child => {
+                        if (child.tagName = 'DIV') newH += child.clientHeight;
+                    });
+                }
+
+                elm.style.cssText = 'height: ' + newH + 'px;';
+            }
+
+            containerQuestions.querySelectorAll('.questions__body').forEach(qBody => {
+                    qBody.querySelector('.questions__title').addEventListener('click', event => {
                             let isOnlyClose = event
                                 .target
                                 .classList
@@ -256,19 +277,16 @@
 
                             if (isOnlyClose) return;
 
-                            const questionsBtn = qBody.querySelector('.questions__btn');
-                            const h = qBody
-                                .querySelector('.questions__text')
-                                .clientHeight + 90;
-
-                            qBody.style.cssText = `height: ${h}px;`;
-
-                            questionsBtn
+                            qBody
+                                .querySelector('.questions__btn')
                                 .classList
                                 .add('questions__btn_close');
-                        });
-                });
 
+                            transtionTo(qBody);
+                     });
+            });
+
+            closeAllQuestions();
         });
     </script>
     <script src="js/main.js"></script>

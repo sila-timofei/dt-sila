@@ -52,14 +52,19 @@
 }
 
 .reviews__ava {
-    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
     height: 80px;
     border-radius: 50%;
     background-color: #C4C4C4;
     margin-right: 20px;
-    background-image: url('../img/ava.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.reviews__ava > span {
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .reviews__name {
@@ -73,6 +78,9 @@
 }
 
 
+.modal__body {
+    background-color: white;
+}
 
 .modal__title {
     font-family: 'Cormorant', serif;
@@ -88,15 +96,14 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 600px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .modal__wrapp-field {
     position: relative;
-    margin-bottom: 38px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding-bottom: 12px;
+    margin-bottom: 20px;
     width: 100%;
+    background-color: #FDECE8;
 }
 
 .modal__wrapp-field::before {
@@ -125,39 +132,12 @@
     background-color: transparent;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    padding: 14px;
 }
 
 .modal__wrap-field-big {
-    height: 200px;
-    padding-bottom: 0;
-}
-
-.modal__wrap-field-big > textarea {
     resize: none;
-    height: 100%;
-    width: 100%;
-}
-
-.modal__form-send {
-    padding: 16px 52px;
-}
-
-.modal__form-send:hover {
-    color: #f7db00;
-}
-
-.input__file {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.input__file-button {
-    font-size: 14px;
-    color: #757575;
-    cursor: pointer;
+    height: 200px;
 }
 
 .modal__text {
@@ -168,6 +148,15 @@
     white-space: pre-line;
 }
 
+.modal__form-send {
+    padding: 16px 50px;
+    background-color: transparent;
+}
+
+.modal__form-send:hover {
+    color: #f7db00;
+}
+
 .modal__text > a {
     text-decoration: none;
     color: #005CCF;
@@ -176,4 +165,45 @@
 
 .modal__text > a:hover {
     color: #ED3551;
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .reviews__container {
+        margin-right: -1%;
+        margin-bottom: -1%;
+    }
+
+    .reviews__card {
+        width: 49%;
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width:940px) {
+    .reviews__container {
+        margin-right: 0;
+        margin-bottom: -20px;
+    }
+
+    .reviews__card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width:390px) {
+    .reviews__card-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .reviews__ava {
+        margin-bottom: 16px;
+        margin-right: 0;
+    }
 }
