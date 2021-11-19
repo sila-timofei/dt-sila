@@ -109,7 +109,7 @@ table {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     color: #000000;
     text-decoration: none;
     margin-right: 42px;
@@ -265,6 +265,10 @@ table {
     align-items: center;
 }
 
+.social1 {
+    display: none;
+}
+
 .social__link {
     text-decoration: none;
     margin-right: 12px;
@@ -391,6 +395,8 @@ table {
         text-transform: uppercase;
         font-size: 24px;
         font-weight: 700;
+        transition: 1s;
+        letter-spacing: 2px;
     }
 
     .mob-menu__link:last-child {
@@ -399,6 +405,18 @@ table {
 
     .mob-memu_link-active {
         color: #ED3551;
+    }
+
+    .mob-menu__margin1 {
+        margin-left: 220px;
+    }
+
+    .mob-menu__margin2 {
+        margin-left: 170px;
+    }
+
+    .mob-menu__margin3 {
+        margin-left: 120px;
     }
 
     .main {
@@ -410,17 +428,24 @@ table {
     }
 
     .footer__row {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 80px;
         margin-bottom: 50px;
     }
 
     .footer__created {
         width: auto;
+        margin-bottom: 26px;
+        margin-top: 26px;
     }
 
-    .footer__copyter, .social {
-        margin-bottom: 26px;
+    .social1 {
+        display: flex;
+        align-items: center;
+    }
+
+    .social {
+        display: none;
     }
 
 

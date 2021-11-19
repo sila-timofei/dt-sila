@@ -362,4 +362,8 @@
     .promo-video__video {
         background-position: center;
     }
+
+    .questions__title > span {
+        line-height: 24px;
+    }
 }
