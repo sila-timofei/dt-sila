@@ -28,9 +28,9 @@
             </nav>
 
             <div class="header__btn-menu">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="header__btn-line header__btn-line1"></div>
+                <div class="header__btn-line header__btn-line2"></div>
+                <div class="header__btn-line header__btn-line3"></div>
             </div>
         </div>
     </header>
@@ -209,27 +209,6 @@
                 clearActiveInput(wrapInput);
             });
 
-
-            // select img in input
-            let inputs = document.querySelectorAll('.input__file');
-            Array.prototype.forEach.call(inputs, function (input) {
-                let label = input.nextElementSibling,
-                    labelVal = label.querySelector('.input__file-button-text').innerText;
-
-                input.addEventListener('change', function (e) {
-                    let countFiles = '';
-                    if (this.files && this.files.length >= 1)
-                        countFiles = this.files.length;
-
-                    if (countFiles)
-                        label.querySelector('.input__file-button-text').innerText =
-                        'Выбрано файлов: ' +
-                        countFiles;
-                    else
-                        label.querySelector('.input__file-button-text').innerText = labelVal;
-                });
-            });
-
             function clearActiveInput(i) {
                 i.forEach(item => {
                     item.classList.remove('modal__field-border');
@@ -255,7 +234,9 @@
             btnSend.addEventListener('click', () => {
                 input.forEach(i => {
                     i.value = '';
-                })
+                });
+
+                clearActiveInput(wrapInput);
             });
         });
     </script>

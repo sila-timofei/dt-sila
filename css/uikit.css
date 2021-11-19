@@ -338,11 +338,6 @@ table {
         width: 30px;
     }
 
-    .header__btn-menu > div {
-        height: 2px;
-        background-color: #000000;
-    }
-
     .mob-menu {
         position: fixed;
         right: 0;
@@ -362,6 +357,28 @@ table {
     .mob-menu-open {
         transform: translateX(0);
         opacity: 1;
+    }
+
+    .header__btn-line {
+        position: absolute;
+        height: 2px;
+        background-color: #000000;
+        transition: 0.5s;
+        left: 0;
+        width: 100%;
+    }
+
+    .header__btn-line1 {
+        top: 0;
+    }
+
+    .header__btn-line2 {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .header__btn-line3 {
+        bottom: 0;
     }
 
     .mob-menu__link {

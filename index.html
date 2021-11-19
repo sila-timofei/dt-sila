@@ -28,9 +28,9 @@
             </nav>
 
             <div class="header__btn-menu">
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="header__btn-line header__btn-line1"></div>
+                <div class="header__btn-line header__btn-line2"></div>
+                <div class="header__btn-line header__btn-line3"></div>
             </div>
         </div>
     </header>
@@ -92,6 +92,7 @@
                     <div class="promo-video__border promo-video__border2"></div>
                     <div class="promo-video__video">
                         <div class="promo-video__video-play"></div>
+                        <div id="player"></div>
                     </div>
                 </div>
             </div>
@@ -215,7 +216,7 @@
         <div class="container footer__row">
             <div class="footer__copyter">© Ведущий Данил Сила 2013</div>
 
-            <div class="social">
+            <div class="social mobile">
                 <a href="#" class="social__link" target="_blank">
                     <img src="img/instagram.svg" class="social__icon" alt="instagram">
                 </a>
@@ -236,7 +237,7 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', function () {
-
+            // close / open FAQ
             const containerQuestions = document.querySelector('.questions');
 
             function closeAllQuestions() {
@@ -288,6 +289,44 @@
 
             closeAllQuestions();
         });
+    </script>
+
+    <script>
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+        var player;
+
+        var btnVideo = document.
+            querySelector('.promo-video__video-play').
+            addEventListener('click', (e) => {
+                let btn = e.target;
+
+                btn.classList.add('promo-video__btn-play-off');
+
+                console.log(btn);
+
+                player = new YT.Player('player', {
+                    playerVars: {
+                        'autoplay': 0,
+                        'controls': 1,
+                        'playsinline': 1
+                    },
+                    videoId: 'SC1ijt91vLU',
+                    events: {
+                        'onReady': onPlayerReady,
+                    }
+                });
+            });
+
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+                        
     </script>
     <script src="js/main.js"></script>
 </body>

@@ -28,6 +28,17 @@
 .contact__img {
     height: 277px;
     background-color: #FAFAFA;
+    background-size: cover;
+}
+
+.contact__img1 {
+    background-image: url('../img/photo1.jpg');
+    background-position: 0 -220px;
+}
+
+.contact__img2 {
+    background-image: url('../img/photo2.JPG');
+    background-position: 0 -20px;
 }
 
 .contact__name {
@@ -138,7 +149,7 @@
     }
 
     .contact__wrapp {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .contact__side {
@@ -156,7 +167,7 @@
     .contact__img {
         height: 400px;
         width: 49%;
-        margin-top: 2%;
+        margin-bottom: 2%;
     }
 
     .contact__img:first-child {
@@ -165,6 +176,14 @@
 }
 
 @media screen and (max-width:640px) {
+
+    .contact__left-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
     .contact__img {
         height: auto;
     }
@@ -173,11 +192,12 @@
         padding-top: 100%;
     }
 
-    .contact__left-side {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 20px;
+    .contact__img1 {
+        background-position: 0;
+    }
+    
+    .contact__img2 {
+        background-position: top;
     }
 
     .modal__body {
