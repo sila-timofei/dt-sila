@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Отзывы</title>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="css/uikit.css">
-    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/uikit.css" />
+    <link rel="stylesheet" href="css/reviews.css" />
     <link rel="stylesheet" href="css/general.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap" rel="stylesheet">
-    <script src="https://use.fontawesome.com/a875baa978.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body class="document">
     <header class="header">
@@ -52,10 +51,13 @@
             
             <form enctype="multipart/form-data" method="post" class="modal__form">
                 <div class="modal__wrapp-field">
-                    <input class="modal__form-field" type="text" placeholder="Имя">
+                    <input class="modal__form-field" type="text" maxlength="512" name="author" placeholder="Имя">
                 </div>
                 <div class="modal__wrapp-field">
-                    <textarea class="modal__form-field modal__wrap-field-big" type="text" placeholder="Ваш текст"></textarea>
+                    <input class="modal__form-field" type="text" maxlength="512" name="author_description" placeholder="Кто вы? Заказчик, коллега и т.д.">
+                </div>
+                <div class="modal__wrapp-field">
+                    <textarea class="modal__form-field modal__wrap-field-big" type="text" name="reviews_text" placeholder="Ваш текст"></textarea>
                 </div>
 
                 <button class="btn modal__form-send off-link">отправить</button>
@@ -80,82 +82,84 @@
                 <div class="reviews__card">
                     <div class="reviews__card-head">
                         <div class="reviews__ava">
-                            <span>Д</span>
+                            <span>в</span>
                         </div>
 
                         <div>
-                            <div class="reviews__name">Денис Дайнеко</div>
+                            <div class="reviews__name">Валерия и Александр</div>
 
                             <p class="reviews__position">
-                                Солист кавер-группы «Новые Горизонты»
+                                Друг ведущего
                             </p>
                         </div>
                     </div>
 
                     <p class="reviews__text">
-                        Отличный ведущий, все крайне профессионально, потрясающая команда, очень большой спектр
-                        сопутствующих услуг. Все качественно, проработано, обдумано и главное, весело! Хотите отлично
-                        провести свадебный вечер, удивить гостей
+                        Если вы хотите, чтобы Ваши гости говорили, что ваша свадьба самая классная и веселая на которой они были, то не раздумывая выбирайте Данила. Ведь ведущий самое главное на вашей свадьбе! От своего лица хочу выразить ОГРОМНУЮ благодарность Данилу! Данил — ты хороший ведущий. Все прошло идеально, словно на одном дыхании! Свадебное видео получилось прекрасное. Данил, желаю дальнейших творческих успехов.
                     </p>
                 </div>
 
                 <div class="reviews__card">
                     <div class="reviews__card-head">
-                        <div class="reviews__ava"></div>
+                        <div class="reviews__ava">
+                            <span>П</span>
+                        </div>
 
                         <div>
-                            <div class="reviews__name">Денис Дайнеко</div>
+                            <div class="reviews__name">Полина Майорова</div>
 
                             <p class="reviews__position">
-                                Солист кавер-группы «Новые Горизонты»
+                                Заказчик
                             </p>
                         </div>
                     </div>
 
                     <p class="reviews__text">
-                        Отличный ведущий, все крайне профессионально, потрясающая команда, очень большой спектр
-                        сопутствующих услуг. Все качественно, проработано, обдумано и главное, весело! Хотите отлично
-                        провести свадебный вечер, удивить гостей
+                        Данила я нашла чудом, посмотрела видео и сказала сейчас же мужу, что он нам нужен) Когда мы с Данилом встретились, я все еще была уверена, что он нам нужен) Были супер классные, абсолютно небанальные конкурсы! Данил следил за временем. Все плясали как в последний раз! :) При этом это все было абсолютно ненавязчиво и как-то естественно, сразу видно, что у Данила абсолютно наметан глаз, на тех кого надо вызывать на конкурсы, а кого — не стоит) Все конкурсы были подобраны Идеально! Так что отзыв посвящается всем тем, кто хочет найти ведущего и просто забыть обо всем. В общем, всем советую!
                     </p>
                 </div>
 
                 <div class="reviews__card">
                     <div class="reviews__card-head">
-                        <div class="reviews__ava"></div>
-
+                        <div class="reviews__ava">
+                            <span>С</span>
+                        </div>
+                            
                         <div>
-                            <div class="reviews__name">Денис Дайнеко</div>
+                            <div class="reviews__name">Степан и Виктория</div>
 
                             <p class="reviews__position">
-                                Солист кавер-группы «Новые Горизонты»
+                                Заказчик
                             </p>
                         </div>
                     </div>
 
                     <p class="reviews__text">
-                        Отличный ведущий, все крайне профессионально, потрясающая команда, очень большой спектр
-                        сопутствующих услуг. Все качественно, проработано, обдумано и главное, весело! Хотите отлично
-                        провести свадебный вечер, удивить гостей
+                        Наша свадьба состоялась!!! Наконец дошли руки и я решил написать отзыв о ведущем.
+                        Начну с того, что мне 32 года и я осознанно подошел к женитьбе. Для меня это серьезный и осознанный шаг. И выбор ведущего — важный момент, не даром от него зависит очень многое, а день этот, как известно, самый важный в жизни!
+                        В общем как только я познакомился с Данилом, у меня не осталось вопросов кто будет ведущим на нашей свадьбе.
+                        Когда я его увидел и мы за 40 минут решили основные вопросы. Родители в восторге, друзья в шоке, мы очень рады! 
                     </p>
                 </div>
 
                 <div class="reviews__card">
                     <div class="reviews__card-head">
-                        <div class="reviews__ava"></div>
+                        <div class="reviews__ava">
+                            <span>В</span>
+                        </div>
 
                         <div>
-                            <div class="reviews__name">Денис Дайнеко</div>
+                            <div class="reviews__name">Владимир</div>
 
                             <p class="reviews__position">
-                                Солист кавер-группы «Новые Горизонты»
+                                Дизайнер интерьеров
                             </p>
                         </div>
                     </div>
 
                     <p class="reviews__text">
-                        Отличный ведущий, все крайне профессионально, потрясающая команда, очень большой спектр
-                        сопутствующих услуг. Все качественно, проработано, обдумано и главное, весело! Хотите отлично
-                        провести свадебный вечер, удивить гостей
+                        Отличный ведущий, все крайне профессионально, потрясающая команда. Все качественно, проработано, обдумано и главное, весело! Хотите отлично
+                        провести свадебный вечер, удивить гостей, рекомендую Даниала. Хороший ведущий, все было отменно.
                     </p>
                 </div>
             </div>
@@ -168,13 +172,13 @@
             <div class="footer__copyter">© Ведущий Данил Сила 2013</div>
 
             <div class="social">
-                <a href="#" class="social__link" target="_blank">
+                <a href="https://www.instagram.com/dt_sila/?utm_medium=copy_link" class="social__link" target="_blank">
                     <img src="img/instagram.svg" class="social__icon" alt="instagram">
                 </a>
                 <a href="https://wa.me/79151111215" class="social__link" target="_blank">
                     <img src="img/whatsApp.svg" class="social__icon" alt="whatsapp">
                 </a>
-                <a href="#" class="social__link social__link-telegram" target="_blank">
+                <a href="https://t.me/SilaDanil" class="social__link social__link-telegram" target="_blank">
                     <img src="img/telegram.svg" class="social__icon" alt="telegram">
                 </a>
             </div>
@@ -184,13 +188,13 @@
             </div>
 
             <div class="social1">
-                <a href="#" class="social__link" target="_blank">
+                <a href="https://www.instagram.com/dt_sila/?utm_medium=copy_link" class="social__link" target="_blank">
                     <img src="img/instagram.svg" class="social__icon" alt="instagram">
                 </a>
                 <a href="https://wa.me/79151111215" class="social__link" target="_blank">
                     <img src="img/whatsApp.svg" class="social__icon" alt="whatsapp">
                 </a>
-                <a href="#" class="social__link social__link-telegram" target="_blank">
+                <a href="https://t.me/SilaDanil" class="social__link social__link-telegram" target="_blank">
                     <img src="img/telegram.svg" class="social__icon" alt="telegram">
                 </a>
             </div>

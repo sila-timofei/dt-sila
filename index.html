@@ -217,13 +217,13 @@
             <div class="footer__copyter">© Ведущий Данил Сила 2013</div>
 
             <div class="social">
-                <a href="#" class="social__link" target="_blank">
+                <a href="https://www.instagram.com/dt_sila/?utm_medium=copy_link" class="social__link" target="_blank">
                     <img src="img/instagram.svg" class="social__icon" alt="instagram">
                 </a>
                 <a href="https://wa.me/79151111215" class="social__link" target="_blank">
                     <img src="img/whatsApp.svg" class="social__icon" alt="whatsapp">
                 </a>
-                <a href="#" class="social__link social__link-telegram" target="_blank">
+                <a href="https://t.me/SilaDanil" class="social__link social__link-telegram" target="_blank">
                     <img src="img/telegram.svg" class="social__icon" alt="telegram">
                 </a>
             </div>
@@ -233,13 +233,13 @@
             </div>
 
             <div class="social1">
-                <a href="#" class="social__link" target="_blank">
+                <a href="https://www.instagram.com/dt_sila/?utm_medium=copy_link" class="social__link" target="_blank">
                     <img src="img/instagram.svg" class="social__icon" alt="instagram">
                 </a>
                 <a href="https://wa.me/79151111215" class="social__link" target="_blank">
                     <img src="img/whatsApp.svg" class="social__icon" alt="whatsapp">
                 </a>
-                <a href="#" class="social__link social__link-telegram" target="_blank">
+                <a href="https://t.me/SilaDanil" class="social__link social__link-telegram" target="_blank">
                     <img src="img/telegram.svg" class="social__icon" alt="telegram">
                 </a>
             </div>
@@ -303,43 +303,7 @@
         });
     </script>
 
-    <script>
-        var tag = document.createElement('script');
-
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-
-        var player;
-
-        var btnVideo = document.
-            querySelector('.promo-video__video-play').
-            addEventListener('click', (e) => {
-                let btn = e.target;
-
-                btn.classList.add('promo-video__btn-play-off');
-
-                console.log(btn);
-
-                player = new YT.Player('player', {
-                    playerVars: {
-                        'autoplay': 0,
-                        'controls': 1,
-                        'playsinline': 1
-                    },
-                    videoId: 'SC1ijt91vLU',
-                    events: {
-                        'onReady': onPlayerReady,
-                    }
-                });
-            });
-
-            function onPlayerReady(event) {
-                event.target.playVideo();
-            }
-                        
-    </script>
+    
     <script src="js/main.js"></script>
 </body>
 </html>

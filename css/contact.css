@@ -29,16 +29,15 @@
     height: 277px;
     background-color: #FAFAFA;
     background-size: cover;
+    background-position: top;
 }
 
 .contact__img1 {
     background-image: url('../img/photo1.jpg');
-    background-position: 0 -220px;
 }
 
 .contact__img2 {
-    background-image: url('../img/photo2.JPG');
-    background-position: 0 -20px;
+    background-image: url('../img/photo.JPG');
 }
 
 .contact__name {
@@ -173,6 +172,7 @@
     .contact__img:first-child {
         margin-right: 1%;
     }
+
 }
 
 @media screen and (max-width:640px) {
